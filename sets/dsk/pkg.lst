@@ -3,6 +3,7 @@ sys-kernel/genkernel
 sys-kernel/linux-firmware
 
 sys-boot/grub
+sys-boot/efibootmgr
 
 sys-fs/ntfs3g
 sys-fs/dosfstools
