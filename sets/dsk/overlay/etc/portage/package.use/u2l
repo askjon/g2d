@@ -4,4 +4,4 @@ media-libs/libpng apng
 media-libs/libvpx postproc
 sys-auth/pambase elogind
 sys-auth/polkit elogind
-dev-lang/python sqlite
+dev-lang/python sqlite -bluetooth
