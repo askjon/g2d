@@ -61,3 +61,8 @@ passwd
 
 
 
+if [ -e root ] 
+	then	
+	cp -rf /root/etc/portage/* /etc/portage/
+	
+fi

@@ -10,9 +10,6 @@
 
 echo "[$0] 2ND STAGE INSTALLER"
 
-	
-
-
 source /etc/profile
 
 echo "[$0] UPDATING AND CONFIGURING PORTAGE TREE & WORLD"
@@ -21,38 +18,44 @@ emerge-webrsync
 
 emerge dev-util/ccache
 
-if [ -e root ] 
+if [ -e /root/etc/portage/make.conf ] 
 	then	
 	cp -rf /root/etc/portage/* /etc/portage/
 	
+else
+	echo "[ERROR] /root/etc/portage/make.conf does not exist"
+	exit 1
 fi
-
-
 
 emerge -k --usepkg y --verbose --update --deep --newuse @world >> /install.log
 
 echo "[$0] 2ND STAGE CONFIGURATION"
 
-# TIME
-echo "Europe/Berlin" > /etc/timezone
-emerge --config sys-libs/timezone-data
+
+
 # LOCALES
-
-
 echo "[USER] locale? us|[de]"
 
 read RESPONSE
 
-if [ -z $RESPONSE ]
+if [ -z $RESPONSE || $RESPONSE=="de"]
 then
 	echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
 	eselect locale set de_DE.utf8
-else	
+	# TIMEZONE
+	echo "Europe/Berlin" > /etc/timezone
+elif [ $RESPONSE=="us" ]
 	echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
 	eselect locale set en_US.utf8
+	# TIMEZONE
+	echo "US/Hawaii" > /etc/timezone
+else
+	exit 1
 fi	
+
+emerge --config sys-libs/timezone-data
 
 env-update 
 source /etc/profile
