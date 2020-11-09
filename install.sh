@@ -9,7 +9,7 @@ BIN_IMPORT=pkg
 
 echo "[$0] U2L INSTALLER"
 
-echo "[USER] Enter the set you want to install [dsk]"
+echo "[USER] Enter the sets you want run [dsk]"
 read SETTINGS
 
 if [ -z $SETTINGS ]
@@ -87,8 +87,13 @@ echo "[$0] COPYING INSTALLER FILES TO DISK"
 cp $USET/chroot.sh $TARGET
 cp $USET/pkg.lst $TARGET
 
-mkdir $TARGET/overlay
-cp -rf $USET/overlay/* $TARGET/overlay
+mkdir $TARGET/root
+
+if [ -e $USET/root ]
+	then
+	cp -rf $USET/root/* $TARGET/root
+fi
+
 
 echo "[$0] 1ST STAGE CONFIGURATION"
 
@@ -118,9 +123,4 @@ echo "[$0] EXITING CHROOT"
 
 umount -l $TARGET/dev{/shm,/pts,}
 umount -R $TARGET{/proc,/sys}
-
-echo "[$0] REMOVING INSTALLER FILES"
-
-rm $TARGET/chroot.sh
-rm $TARGET/pkg.lst
 
