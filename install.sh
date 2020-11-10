@@ -59,15 +59,10 @@ then
 	fi
 fi
 
-echo "[USER] Should we import binary pkgs? y|[n]"
+echo "[USER] Should we import binary pkgs? [y]|n"
 read RESPONSE
 
-if [ -z $RESPONSE ]
-then
-	RESPONSE=n
-fi
-
-if [ $RESPONSE = "y" ]
+if [ -z $RESPONSE || $RESPONSE = "y" ]
 then
 	echo "[USER] Importing from? [$BIN_IMPORT]"
 	read RESPONSE
@@ -139,7 +134,7 @@ echo "[USER] You want to unmount? [y]|n"
 
 read RESPONSE
 if [ -z $RESPONSE ]
-
+then
 	umount -l $TARGET/dev{/shm,/pts,}
 	umount -R $TARGET{/proc,/sys}
 fi

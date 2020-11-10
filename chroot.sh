@@ -38,7 +38,7 @@ echo "[USER] locale? us|[de]"
 
 read RESPONSE
 
-if [ -z $RESPONSE || $RESPONSE=="de"]
+if [ -z $RESPONSE || $RESPONSE == "de" ]
 then
 	echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 	locale-gen
