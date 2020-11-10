@@ -129,6 +129,7 @@ echo "[USER] You want to start bash? [y]|n"
 
 read RESPONSE
 if [ -z $RESPONSE ]
+then
 	chroot $TARGET /bin/bash
 fi
 
