@@ -120,14 +120,6 @@ mount --make-rslave $TARGET/dev
 
 chroot $TARGET /chroot.sh
 
-echo "[USER] You want to start bash? [y]|n"
-
-read RESPONSE
-if [ -z $RESPONSE ]
-then
-	chroot $TARGET /bin/bash
-fi
-
 echo "[$0] EXITING CHROOT"
 
 echo "[USER] You want to unmount? [y]|n"

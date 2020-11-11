@@ -84,6 +84,7 @@ echo "[USER] Enter root password"
 
 passwd
 
+/bin/bash
 
 
 
