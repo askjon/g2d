@@ -15,8 +15,6 @@ app-portage/gentoolkit
 app-portage/layman
 app-admin/metalog
 app-admin/doas
-net-wireless/wpa_supplicant
-net-wireless/bluez
 app-crypt/chntpw
 net-misc/openssh
 net-misc/dhcpcd
@@ -24,25 +22,7 @@ net-misc/wget
 net-vpn/tor
 dev-vcs/git
 www-client/lynx
-media-sound/pulseaudio
 
-x11-base/xorg-server
-x11-apps/xinit
-x11-wm/bspwm
-x11-apps/xset
-x11-apps/xrandr
-x11-apps/setxkbmap
-x11-misc/xclip
-x11-misc/dmenu
-x11-misc/polybar
-x11-misc/sxhkd
-x11-misc/redshift
-x11-terms/rxvt-unicode
-
-media-gfx/feh
-media-sound/cmus
 app-emulation/qemu
-www-client/firefox
-sys-power/acpi
 net-misc/youtube-dl
 

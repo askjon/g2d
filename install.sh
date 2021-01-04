@@ -4,7 +4,7 @@
 
 # Assumes the Target is already mounted like in production
 
-TARGET=/mnt/gentoo
+TARGET=root
 BIN_IMPORT=pkg
 
 echo "[$0] U2L INSTALLER"
