@@ -1,8 +1,8 @@
-# The Urban Tool
+# The Gentoo 2 Disk
 
-u2l is a gentoo "distribution" aimed at providing a sysadmin tool thats
+g2d is a gentoo "distribution" aimed at providing a sysadmin tool thats
 
-- [ ] already setup the way @askdonjohn and/or you wants
+- [ ] already setup the way @askjon and/or you wants
 - [x] easy to deploy
 - [ ] selfupdating
 - [x] customizeable
@@ -12,14 +12,14 @@ u2l is a gentoo "distribution" aimed at providing a sysadmin tool thats
 1. Get a gentoo iso running on the target system
 2. Get internet working on the live system
 3. Create the disklayout and mount them as you would want them in the system under /mnt/gentoo while /mnt/gentoo is the root of the new system
-4. Run "git clone https://www.github.com/askdonjohn/u2l.git"
-5. Run "cd u2l"
+4. Run "git clone https://www.github.com/askdonjohn/g2d.git"
+5. Run "cd g2d"
 6. Run "./install.sh"
 7. Follow instuctions given by the installer
 
 ## The Start
 
-u2l is [atm] a script that installs gentoo with custom pkgs and 
+g2d is [atm] a script that installs gentoo with custom pkgs and 
 basic configuration files.
 
 ## TODO

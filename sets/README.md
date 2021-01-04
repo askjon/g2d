@@ -1,4 +1,4 @@
-# u2l Sets
+# g2d Sets
 
 	Sets are bundled configuration options.
 

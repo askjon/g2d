@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# The u2l installer 2nd stage (chroot)
+# The g2d installer 2nd stage (chroot)
 
 # !!!!!!!!!!!!!!!!!!!
 # Not to start on your own this will be handled by 1st stage installer

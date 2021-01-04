@@ -1,13 +1,13 @@
 #!/bin/bash 
 
-# The u2l installer 1st stage
+# The g2d installer 1st stage
 
 # Assumes the Target is already mounted like in production
 
 TARGET=root
 BIN_IMPORT=pkg
 
-echo "[$0] U2L INSTALLER"
+echo "[$0] G2D INSTALLER"
 
 echo "[USER] Enter the sets you want run [dsk]"
 read SETTINGS
