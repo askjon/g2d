@@ -4,7 +4,10 @@
 
 # Assumes the Target is already mounted like in production
 
-TARGET=root
+# Needs some cleanup
+#set -eu
+
+TARGET=/mnt/usb
 BIN_IMPORT=pkg
 
 echo "[$0] G2D INSTALLER"

@@ -7,7 +7,7 @@ install: weaponize
 
 weaponize:
 	chmod +x *.sh
-	chmod +x sets/*/*.sh
+	chmod +x sets/*/*.sh || true
 
 disarm:
 	chmod -x *.sh
