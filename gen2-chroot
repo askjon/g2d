@@ -1,0 +1,33 @@
+#!/bin/bash 
+
+# The g2d installer 1st stage
+
+# Assumes the Target is already mounted like in production
+
+# Needs some cleanup
+#set -eu
+
+TARGET=/mnt/usb
+
+echo "[$0] Chrooting"
+
+cp --dereference /etc/resolv.conf $TARGET/etc/resolv.conf
+
+mount --types proc /proc $TARGET/proc
+mount --rbind /sys $TARGET/sys
+mount --make-rslave $TARGET/sys
+mount --rbind /dev $TARGET/dev
+mount --make-rslave $TARGET/dev 
+
+chroot $TARGET /bin/bash
+
+echo "[$0] Quitting"
+
+echo "[USER] You want to unmount? [y]|n"
+
+read RESPONSE
+if [ -z $RESPONSE ]
+then
+	umount -l $TARGET/dev{/shm,/pts,}
+	umount -R $TARGET{/proc,/sys}
+fi
