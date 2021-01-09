@@ -1,4 +1,4 @@
-# Needed by u2l 
+# Needed by g2d
 
 media-libs/libpng apng
 media-libs/libvpx postproc
